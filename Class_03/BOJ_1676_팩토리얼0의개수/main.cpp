@@ -1,5 +1,5 @@
 /* hanabzu */
-/* BOJ_1676 ÆÑÅä¸®¾ó 0ÀÇ °³¼ö */
+/* BOJ_1676 íŒ©í† ë¦¬ì–¼ 0ì˜ ê°œìˆ˜ */
 
 #include <iostream>
 
