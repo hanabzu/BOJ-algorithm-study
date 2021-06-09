@@ -1,5 +1,5 @@
 /* hanabzu */
-/* BOJ_11723 ÁýÇÕ */ 
+/* BOJ_11723 ì§‘í•© */ 
 
 #include <iostream>
 #include <set>
