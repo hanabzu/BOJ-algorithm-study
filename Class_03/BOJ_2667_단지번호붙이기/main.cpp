@@ -27,7 +27,7 @@ int main() {
 		matrix[i] = new int[N + 2];
 
 		// padding
-		matrix[i][0] = matrix[i][N + 1] = 0;
+		matrix[i][0] = matrix[i][N + 1] = 2;
 		if (i == 0 || i == N + 1) {
 			for (int j = 1; j < N + 2; j++) {
 				matrix[i][j] = 2;
