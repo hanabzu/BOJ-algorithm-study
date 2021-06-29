@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int M, N, H, num_tomatoes, ripe = 0, day = 0;
+int M, N, H, num_tomatoes, ripe = 0, day = -1;
 int box[102][102][102]; // box[H][M][N]
 int dir[6][3] = { {1,0,0},{-1,0,0},{0,1,0},{0,-1,0},{0,0,1},{0,0,-1} };
 queue<pair<int,pair<int,int>>> q; // {H,M,N}
@@ -63,7 +63,7 @@ int main() {
 
 
 	if (num_tomatoes == ripe) {
-		cout << --day; // minus last day
+		cout << day;
 	}
 	else {
 		cout << -1;
