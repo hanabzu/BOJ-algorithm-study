@@ -1,5 +1,5 @@
 ﻿/* hanabzu */
-/* BOJ_12851 숨바꼭질2 */
+/* BOJ_12851 숨바꼭질 2 */
 
 #include <iostream>
 #include <queue>
@@ -49,6 +49,7 @@ int main() {
 				for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
 					found[*it] = 1;
 				}
+				v.clear();
 				q_count = q.size();
 				t++;
 			}
