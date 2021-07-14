@@ -25,7 +25,21 @@ int main() {
 
 	for (int i = 0; i < E; i++) {
 		cin >> s_v >> e_v >> value;
-		e[s_v].push_back(make_pair(value, e_v));
+		if (e[s_v].empty()) {
+			e[s_v].push_back(make_pair(value, e_v));
+		}
+		else {
+			for (vector<pair<int, int>>::iterator it = e[s_v].begin(); it != e[s_v].end(); it++) {
+				if (it == --e[s_v].end()) {
+					e[s_v].push_back(make_pair(value, e_v));
+					break;
+				}
+				if ((*it).second == e_v && (*it).first > value) {
+					(*it).first = value;
+					break;
+				}
+			}
+		}
 	}
 
 	cin >> A >> B;
