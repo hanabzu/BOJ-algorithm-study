@@ -18,6 +18,9 @@ int main() {
 	cout.tie(NULL);
 
 	cin >> n;
+	for (int i = 1; i * i <= n; i++) {
+		squares.push_back(i * i);
+	}
 
 	if (isSolo()) {
 		m = 1;
@@ -37,9 +40,8 @@ int main() {
 }
 
 bool isSolo() {
-	for (int i = 1; i * i <= n; i++) {
-		squares.push_back(i * i); 
-		if (i * i == n) {
+	for (int i = squares.size() - 1; i > 0; i--) {
+		if (squares[i] == n) {
 			return true;
 		}
 	}
@@ -58,9 +60,9 @@ bool isDuo() {
 }
 
 bool isTrio() {
-	for (int i = squares.size() - 1; i > 1; i--) {
-		for (int j = 0; j < i - 1; j++) {
-			for (int k = j + 1; k < i; k++) {
+	for (int i = 0; i < squares.size(); i++) {
+		for (int j = 0; j < squares.size(); j++) {
+			for (int k = 0; k < squares.size(); k++) {
 				if (squares[i] + squares[j] + squares[k] == n) {
 					return true;
 				}
