@@ -1,4 +1,4 @@
-/* BOJ_17626_FourSquares */
+﻿/* BOJ_17626_FourSquares */
 /* hanabzu */
 #include <iostream>
 #include <vector>
@@ -40,7 +40,7 @@ int main() {
 }
 
 bool isSolo() {
-	for (int i = squares.size() - 1; i > 0; i--) {
+	for (int i = 0; i < squares.size(); i++) {
 		if (squares[i] == n) {
 			return true;
 		}
@@ -49,8 +49,8 @@ bool isSolo() {
 }
 
 bool isDuo() {
-	for (int i = squares.size() - 1; i > 0; i--) {
-		for (int j = 0; j < i; j++) {
+	for (int i = squares.size() - 1; i >= 0; i--) {
+		for (int j = 0; j < squares.size(); j++) {
 			if (squares[i] + squares[j] == n) {
 				return true;
 			}
