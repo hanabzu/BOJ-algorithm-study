@@ -1,4 +1,4 @@
-/* BOJ_3425 ╟М╫╨ец */
+О╩©/* BOJ_3425 ЙЁ═Л┼╓М┐² */
 /* hanabzu */
 
 #include <iostream>
