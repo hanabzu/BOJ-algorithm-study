@@ -16,6 +16,7 @@ struct Word {
 	Word(bool isWord, char c, string s) :isWord(isWord),c(c), s(s) {}
 };
 
+int SCORE_TABLE[9] = { 0,0,0,1,1,2,3,5,11 };
 int dx[8] = { -1,0,1,-1,1,-1,0,1 };
 int dy[8] = { -1,-1,-1,0,0,1,1,1 };
 Word root;
@@ -115,11 +116,7 @@ void dfs(int depth, int r, int c) {
 					max_size = max(max_size, (int)(*it)->s.size());
 					wset.insert((*it)->s);
 					num_word++;
-					if ((*it)->s.size() == 3 || (*it)->s.size() == 4) score++;
-					else if ((*it)->s.size() == 5) score += 2;
-					else if ((*it)->s.size() == 6) score += 3;
-					else if ((*it)->s.size() == 7) score += 5;
-					else if ((*it)->s.size() == 8) score += 11;
+					score += SCORE_TABLE[(int)((*it)->s.size())];
 				}
 			}
 			s = (*it)->s;
