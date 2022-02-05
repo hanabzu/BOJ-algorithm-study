@@ -35,14 +35,5 @@ int main() {
 
 void get_area(int i) {
 	double dx = x[i + 1] - x[i], dy = y[i] + y[i + 1];
-	double flag;
-	if (dx > 0) {
-		flag = 1.0;
-	}
-	else {
-		flag = -1.0;
-		dx = -dx;
-	}
-
-	S += dx * dy * flag;
+	S += dx * dy;
 }
