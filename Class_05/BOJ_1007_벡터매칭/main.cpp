@@ -2,8 +2,6 @@
 /* hanabzu */
 
 #include <iostream>
-#include <bitset>
-#include <vector>
 #include <algorithm>
 #include <math.h>
 
@@ -11,10 +9,10 @@ using namespace std;
 
 const int MAXN = 20;
 const double INF = 987654321.0;
+
 int T, N;
 int x[MAXN], y[MAXN];
-double sum_x = 0, sum_y = 0, local_sum_x, local_sum_y;
-double ans;
+double sum_x = 0.0, sum_y = 0.0, ans;
 void solution();
 void dfs(int p, int num);
 
