@@ -10,7 +10,7 @@ solved.ac 기준 class 별 돌파
 
 - [x] Class 3 
 - [x] Class 4 
-- [ ] Class 5
+- [x] Class 5
 - [ ] Class 6
 
 ---
