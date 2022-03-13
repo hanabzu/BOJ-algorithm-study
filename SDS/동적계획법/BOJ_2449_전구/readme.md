@@ -1,3 +1,5 @@
 ### BOJ_2449 전구
 
-DP로 구현.
+main.cpp : 2차원 dp
+
+main2.cpp : 3차원  dp
