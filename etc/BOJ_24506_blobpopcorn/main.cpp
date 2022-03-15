@@ -102,16 +102,16 @@ void update(int p, int c) {
 }
 
 int count_num(int p, pair<int, int>(&w)[1 << POWN]) {
-	int cnt = 0;
+	int cnt;
 	if (w[p].second == 1) {
 		return (w[p].first > m) ? 1 : 0;
 	}
 	if (w[p << 1].first > m) {
-		cnt += w[p].second - w[p << 1].second;
+		cnt = w[p].second - w[p << 1].second;
 		return cnt + count_num(p << 1,  w);
 	}
 	else { // w[p << 1].first < m
-		return cnt + count_num((p << 1)|1, w);
+		return count_num((p << 1)|1, w);
 	}
 	
 }
