@@ -1,10 +1,10 @@
 #### hanabzu
 
+**BOJ algorithm**
+
 [Github Blog](https://hanabzu.github.io/)
 
 ---
-
-**BOJ algorithm**
 
 solved.ac 기준 class 별 돌파
 
@@ -12,6 +12,10 @@ solved.ac 기준 class 별 돌파
 - [x] Class 4 
 - [x] Class 5
 - [ ] Class 6
+
+---
+
+**[삼성 SW 역량 테스트 기출 문제](https://www.acmicpc.net/workbook/view/1152)** 풀이
 
 ---
 
