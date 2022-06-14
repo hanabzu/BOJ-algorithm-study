@@ -27,11 +27,7 @@ int main() {
 
 	maxb = (1 << N) - 1;
 
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j <= maxb; j++) {
-			dp[i][j] = INF;
-		}
-	}
+	fill(&dp[0][0], &dp[MAXN - 1][1 << MAXN], -1);
 
 	cout << dfs(START, 1 << START);
 
@@ -48,17 +44,17 @@ int dfs(int n, int b) {
 		}
 	}
 
-	if (dp[n][b] != INF) {
+	if (dp[n][b] >= 0 ) {
 		return dp[n][b];
 	}
 
-	int temp = INF;
+	int &ret = dp[n][b] = INF;
 	for (int i = 0; i < N; i++) {
 		if ((b & (1 << i)) == 0 && cost[n][i] != 0) {
-			temp = min(temp, dfs(i, b | (1 << i)) + cost[n][i]);
+			ret = min(ret, dfs(i, b | (1 << i)) + cost[n][i]);
 		}
 		
 	}
 	
-	return dp[n][b] = temp;
+	return ret;
 }
