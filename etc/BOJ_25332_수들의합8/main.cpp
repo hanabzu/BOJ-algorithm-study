@@ -10,7 +10,7 @@ typedef long long ll;
 const int MAXN = 200000;
 
 int N;
-ll A[MAXN + 1], B[MAXN + 1], AB[MAXN + 1], ans = 0;
+ll A[MAXN + 1], B[MAXN + 1], AB, ans = 0;
 map<ll, ll> m;
 
 int main() {
@@ -29,12 +29,9 @@ int main() {
 	}
 	m[0]++;
 	for (int i = 1; i <= N; i++) {
-		AB[i] =  A[i] - B[i];
-		auto it = m.find(AB[i]);
-		if (it != m.end()) {
-			ans += (*it).second;
-		}
-		m[AB[i]]++;
+		AB =  A[i] - B[i];
+		ans += m[AB];
+		m[AB]++;
 	}
 
 	cout << ans;
